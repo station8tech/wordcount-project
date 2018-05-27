@@ -1,0 +1,16 @@
+<h1>Count Page</h1>
+
+<a href = "{% url 'home' %}">Back</a>
+
+<h2>There are {{total_words}} words in your text</h2>
+
+<h2>original</h2>
+{{full_text}}
+
+<h2>Total Words</h2>
+{% for word, count_total in sorted_list %}
+{{word}} = {{count_total}}<br>
+
+
+{% endfor %}
+	
